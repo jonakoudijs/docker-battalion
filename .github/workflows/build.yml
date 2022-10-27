@@ -1,0 +1,35 @@
+name: build
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: '0 10 * * 1'
+
+
+jobs:
+  build-push-image:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: e1himself/goss-installation-action@v1.0.3
+        with:
+          version: 'v0.3.14'
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+      - name: Build Image
+        uses: docker/build-push-action@v3
+        with:
+          load: true
+          tags: jonakoudijs/battalion:latest
+      - name: Push Image
+        uses: docker/build-push-action@v3
+        with:
+          platforms: linux/amd64
+          push: true
+          tags: jonakoudijs/battalion:latest
