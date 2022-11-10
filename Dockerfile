@@ -16,7 +16,7 @@ ENV HOME /data
 RUN useradd -m -d $HOME $USER
 
 # Create required directories
-RUN mkdir -p $HOME/saves $HOME/config
+#RUN mkdir -p $HOME/config
 
 # Install prerequisites
 RUN apt-get update -y \

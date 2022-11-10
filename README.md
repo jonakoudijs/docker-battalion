@@ -37,6 +37,7 @@ file. The settings can be overwritten by copying a custom version to
 ## Sources
 
 * [https://steamcommunity.com/app/489940/discussions/0/3432326055078758588/](https://steamcommunity.com/app/489940/discussions/0/3432326055078758588/)
+* [http://wiki.battaliongame.com/](http://wiki.battaliongame.com/)
 * [https://segmentnext.com/battalion-1944-server/](https://segmentnext.com/battalion-1944-server/)
 * [https://segmentnext.com/battalion-1944-server-commands/](https://segmentnext.com/battalion-1944-server-commands/)
 
